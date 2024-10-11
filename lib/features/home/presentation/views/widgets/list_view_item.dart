@@ -11,7 +11,7 @@ class ListViewItem extends StatelessWidget {
       child: Container(
         width: 50,
         decoration:  BoxDecoration(
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(5),
           image: const DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(AssetData.test_image1),

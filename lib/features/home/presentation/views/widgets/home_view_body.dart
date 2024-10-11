@@ -10,18 +10,24 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 16),
-      child:  Column(
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturesBooksListView(),
-          SizedBox(height: 50,),
-          Text('Best Seller' ,
-          style: AppStyles.titleMedium,),
+          SizedBox(
+            height: 50,
+          ),
+          Text(
+            'Best Seller',
+            style: AppStyles.textStyleSemiBold18,
+          ),
+          SizedBox(
+            height: 20,
+          ),
           BestSellerListVewItem()
-
         ],
       ),
     );

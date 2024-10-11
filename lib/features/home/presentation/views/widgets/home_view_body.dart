@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styels.dart';
+import 'best_seller_list_vew_item.dart';
 import 'custom_app_bar.dart';
 import 'features_books_list_view.dart';
 
@@ -18,7 +19,9 @@ class HomeViewBody extends StatelessWidget {
           FeaturesBooksListView(),
           SizedBox(height: 50,),
           Text('Best Seller' ,
-          style: AppStyles.titleMedum,)
+          style: AppStyles.titleMedium,),
+          BestSellerListVewItem()
+
         ],
       ),
     );

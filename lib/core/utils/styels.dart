@@ -21,4 +21,9 @@ abstract class AppStyles {
     fontFamily: KCaveatFont,
 
   );
+  static const textStyleKFont20 = TextStyle(
+      fontSize: 20,
+
+      fontWeight: FontWeight.bold
+  );
 }

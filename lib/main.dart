@@ -21,8 +21,7 @@ class Bookly extends StatelessWidget {
     ),
       debugShowCheckedModeBanner: false,
       home:const SplashView(),
-   
-      
+
+
     );
-  }
-}
+}}

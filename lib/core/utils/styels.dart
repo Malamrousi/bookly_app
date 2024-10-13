@@ -16,7 +16,7 @@ abstract class AppStyles {
   static const textStyleMedium16 =
       TextStyle(fontSize: 16, fontWeight: FontWeight.w500);
 
-  static const textStyleKCaveatfont30 = TextStyle(
+  static const textStyleCaveatFont30 = TextStyle(
     fontSize: 30,
     fontFamily: kCaveatFont,
       fontWeight: FontWeight.bold

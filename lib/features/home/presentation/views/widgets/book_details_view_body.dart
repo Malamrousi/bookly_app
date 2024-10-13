@@ -4,6 +4,7 @@ import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_
 import 'package:flutter/material.dart';
 
 import 'book_item.dart';
+import 'box_action.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -16,29 +17,39 @@ class BookDetailsViewBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomBookDetailsAppBar(),
-          const SizedBox(height: 32,),
+          const SizedBox(
+            height: 12,
+          ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .2),
+            padding: EdgeInsets.symmetric(horizontal: width * .23),
             child: const BookImageItem(),
           ),
           const SizedBox(height: 33),
-          const Text('The Jungle Book'  ,
-          style: AppStyles.textStyleKCaveatfont30,) ,
-
-          const SizedBox(height: 4,),
-
+          const Text(
+            'The Jungle Book',
+            style: AppStyles.textStyleCaveatFont30,
+          ),
+          const SizedBox(
+            height: 4,
+          ),
           Opacity(
             opacity: .7,
-            child: Text('RudYard Book'  ,
+            child: Text(
+              'RudYard Book',
               style: AppStyles.textStyleKFont20.copyWith(
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w400
-              ),),
-          ) ,
-const SizedBox(height: 14,),
-       const   BookRating(
-         mainAxisAlignment: MainAxisAlignment.center,
-       ),
+                  fontStyle: FontStyle.italic, fontWeight: FontWeight.w400),
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          const SizedBox(
+            height: 37,
+          ),
+          const BoxAction()
         ],
       ),
     );

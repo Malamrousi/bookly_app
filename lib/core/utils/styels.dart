@@ -32,4 +32,5 @@ abstract class AppStyles {
 
       fontWeight: FontWeight.bold
   );
+
 }

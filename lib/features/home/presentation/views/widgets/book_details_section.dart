@@ -15,7 +15,9 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .25),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageUrl: 'https://www.interviewbit.com/blog/wp-content/uploads/2022/02/Data-Structures-And-Algorithms-Made-Easy-380x491.jpg',
+          ),
         ),
         const SizedBox(height: 33),
         const Text(

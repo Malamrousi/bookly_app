@@ -15,7 +15,9 @@ class SimilarBoxListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(vertical: 8),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                imageUrl: 'https://www.interviewbit.com/blog/wp-content/uploads/2022/02/Data-Structures-And-Algorithms-Made-Easy-380x491.jpg',
+              ),
             );
           }),
     );

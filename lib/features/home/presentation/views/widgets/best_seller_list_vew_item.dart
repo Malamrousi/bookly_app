@@ -21,7 +21,7 @@ class BookSellerListViewItem extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 15),
-              child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks.thumbnail),
+              child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? ''),
             ),
    
             const SizedBox(

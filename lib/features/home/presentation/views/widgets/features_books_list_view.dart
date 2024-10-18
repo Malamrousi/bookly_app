@@ -22,9 +22,9 @@ class FeaturesBooksListView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding:const EdgeInsets.symmetric(horizontal: 10),
                     child: CustomBookImage(
-                      imageUrl: state.book[index].volumeInfo.imageLinks.thumbnail,
+                      imageUrl: state.book[index].volumeInfo.imageLinks?.thumbnail ?? '',
                     ),
                   );
                 }),

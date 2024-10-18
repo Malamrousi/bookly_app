@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:bookly_app/features/home/data/models/book_model.dart';
 import 'package:bookly_app/features/home/data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 
@@ -17,7 +18,7 @@ class SimilarBookCubit extends Cubit<SimilarBookState> {
     result.fold((failure) {
       emit(SimilarBookFailure(errorMessage: failure.errorMessage));
     }, (similar) {
-      emit(SimilarBookSuccess());
+      emit(SimilarBookSuccess(book: similar));
     });
   }
 }

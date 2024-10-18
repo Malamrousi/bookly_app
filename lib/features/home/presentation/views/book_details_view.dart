@@ -18,13 +18,18 @@ class _BookDetailsViewState extends State<BookDetailsView> {
   void initState() {
     super.initState();
 
-    context.read<SimilarBookCubit>().fetchSimilarBook(widget.bookModel.volumeInfo.categories![0]);
+    context
+        .read<SimilarBookCubit>()
+        .fetchSimilarBook(widget.bookModel.volumeInfo.categories![0]);
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(child: BookDetailsViewBody()),
+    return Scaffold(
+      body: SafeArea(
+          child: BookDetailsViewBody(
+        bookModel: widget.bookModel,
+      )),
     );
   }
 }

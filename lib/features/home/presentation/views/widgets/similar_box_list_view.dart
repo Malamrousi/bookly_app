@@ -16,21 +16,22 @@ class SimilarBoxListView extends StatelessWidget {
         builder: (context, state) {
           if (state is SimilarBookSuccess) {
             return ListView.builder(
+                itemCount: state.book.length,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8 , horizontal: 5),
                     child: CustomBookImage(
-                      imageUrl:
-                          'https://www.interviewbit.com/blog/wp-content/uploads/2022/02/Data-Structures-And-Algorithms-Made-Easy-380x491.jpg',
-                    ),
+                        imageUrl: state
+                                .book[index].volumeInfo.imageLinks?.thumbnail ??
+                            ''),
                   );
                 });
           } else if (state is SimilarBookFailure) {
             return CustomErrorWidget(errorMessage: state.errorMessage);
           } else {
-            return const Center(child:  CustomLoadingIndicator());
+            return const Center(child: CustomLoadingIndicator());
           }
         },
       ),
